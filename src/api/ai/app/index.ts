@@ -23,27 +23,27 @@ export interface AppVO {
 export const AppApi = {
   // 查询应用分页
   getAppPage: async (params: any) => {
-    return await request.get({ url: `/system/ai/app/page`, params })
+    return await request.get({ url: `/ai/app/page`, params })
   },
 
   // 查询应用详情
   getApp: async (id: number) => {
-    return await request.get({ url: `/system/ai/app/get?id=` + id })
+    return await request.get({ url: `/ai/app/get?id=` + id })
   },
 
   // 新增应用
   createApp: async (data: AppVO) => {
-    return await request.post({ url: `/system/ai/app/create`, data })
+    return await request.post({ url: `/ai/app/create`, data })
   },
 
   // 修改应用
   updateApp: async (data: AppVO) => {
-    return await request.put({ url: `/system/ai/app/update`, data })
+    return await request.put({ url: `/ai/app/update`, data })
   },
 
   // 删除应用
   deleteApp: async (id: number) => {
-    return await request.delete({ url: `/system/ai/app/delete?id=` + id })
+    return await request.delete({ url: `/ai/app/delete?id=` + id })
   },
 
   // 导出应用 Excel
